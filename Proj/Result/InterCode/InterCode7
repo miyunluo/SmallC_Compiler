@@ -1,0 +1,217 @@
+gir print------------------------------------
+#0		gnew	4	t2	
+#1		gnew	20	t4	
+mir print------------------------------------
+#0		li	t3	913	
+#1		neg	t3	t3	
+#2		sw	t3	t2	0
+#3		li	t5	0	
+#4		sw	t5	t4	0
+#5		li	t6	1	
+#6		sw	t6	t4	4
+#7		li	t7	2	
+#8		sw	t7	t4	8
+#9		li	t8	3	
+#10		sw	t8	t4	12
+#11		li	t9	4	
+#12		sw	t9	t4	16
+ir print-------------------------------------
+#0func	main
+#1		add	t11	$sp	-248
+#2		move	t10	t11	
+#3		add	t13	$sp	-252
+#4		move	t12	t13	
+#5		add	t15	$sp	-276
+#6		move	t14	t15	
+#7		move	t16	t2	
+#8		call	__scanf_one
+#9		sw	$v0	t16	0
+#10		move	t17	t10	
+#11		li	t18	0	
+#12		sw	t18	t17	0
+#13		move	t19	t10	
+#14		lw	t19	t19	0
+#15		li	t20	2	
+#16		sub	t20	t19	t20
+#17		li	t19	1	
+#18		bltz	t20	l3	
+#19		li	t19	0	
+#20		label	l3	
+#21		beqz	t19	l2	
+#22		label	l0	
+#23		move	t21	t12	
+#24		li	t22	0	
+#25		sw	t22	t21	0
+#26		move	t23	t12	
+#27		lw	t23	t23	0
+#28		li	t24	3	
+#29		sub	t24	t23	t24
+#30		li	t23	1	
+#31		bltz	t24	l7	
+#32		li	t23	0	
+#33		label	l7	
+#34		beqz	t23	l6	
+#35		label	l4	
+#36		move	t25	t14	
+#37		move	t26	t10	
+#38		lw	t26	t26	0
+#39		mul	t27	t26	12
+#40		add	t25	t25	t27
+#41		move	t28	t12	
+#42		lw	t28	t28	0
+#43		mul	t29	t28	4
+#44		add	t25	t25	t29
+#45		call	__scanf_one
+#46		sw	$v0	t25	0
+#47		label	l5	
+#48		move	t21	t12	
+#49		move	t30	t21	
+#50		lw	t21	t21	0
+#51		add	t21	t21	1
+#52		sw	t21	t30	0
+#53		move	t31	t12	
+#54		lw	t31	t31	0
+#55		li	t32	3	
+#56		sub	t32	t31	t32
+#57		li	t31	1	
+#58		bltz	t32	l8	
+#59		li	t31	0	
+#60		label	l8	
+#61		bnez	t31	l4	
+#62		label	l6	
+#63		label	l1	
+#64		move	t17	t10	
+#65		move	t33	t17	
+#66		lw	t17	t17	0
+#67		add	t17	t17	1
+#68		sw	t17	t33	0
+#69		move	t34	t10	
+#70		lw	t34	t34	0
+#71		li	t35	2	
+#72		sub	t35	t34	t35
+#73		li	t34	1	
+#74		bltz	t35	l9	
+#75		li	t34	0	
+#76		label	l9	
+#77		bnez	t34	l0	
+#78		label	l2	
+#79		move	t36	t10	
+#80		li	t37	0	
+#81		sw	t37	t36	0
+#82		move	t38	t10	
+#83		lw	t38	t38	0
+#84		li	t39	5	
+#85		sub	t39	t38	t39
+#86		li	t38	1	
+#87		bltz	t39	l13	
+#88		li	t38	0	
+#89		label	l13	
+#90		beqz	t38	l12	
+#91		label	l10	
+#92		add	t41	$sp	-280
+#93		move	t40	t41	
+#94		li	t42	1000000	
+#95		sw	t42	t40	0
+#96		move	t43	t40	
+#97		lw	t43	t43	0
+#98		move	$a0	t43	
+#99		call	__printf_one
+#100		move	t44	t4	
+#101		move	t45	t10	
+#102		lw	t45	t45	0
+#103		mul	t46	t45	4
+#104		add	t44	t44	t46
+#105		lw	t44	t44	0
+#106		move	$a0	t44	
+#107		call	__printf_one
+#108		label	l11	
+#109		move	t36	t10	
+#110		move	t47	t36	
+#111		lw	t36	t36	0
+#112		add	t36	t36	1
+#113		sw	t36	t47	0
+#114		move	t48	t10	
+#115		lw	t48	t48	0
+#116		li	t49	5	
+#117		sub	t49	t48	t49
+#118		li	t48	1	
+#119		bltz	t49	l14	
+#120		li	t48	0	
+#121		label	l14	
+#122		bnez	t48	l10	
+#123		label	l12	
+#124		move	t50	t10	
+#125		li	t51	0	
+#126		sw	t51	t50	0
+#127		move	t52	t10	
+#128		lw	t52	t52	0
+#129		li	t53	2	
+#130		sub	t53	t52	t53
+#131		li	t52	1	
+#132		bltz	t53	l18	
+#133		li	t52	0	
+#134		label	l18	
+#135		beqz	t52	l17	
+#136		label	l15	
+#137		move	t54	t40	
+#138		li	t55	0	
+#139		sw	t55	t54	0
+#140		move	t56	t40	
+#141		lw	t56	t56	0
+#142		li	t57	3	
+#143		sub	t57	t56	t57
+#144		li	t56	1	
+#145		bltz	t57	l22	
+#146		li	t56	0	
+#147		label	l22	
+#148		beqz	t56	l21	
+#149		label	l19	
+#150		move	t58	t14	
+#151		move	t59	t10	
+#152		lw	t59	t59	0
+#153		mul	t60	t59	12
+#154		add	t58	t58	t60
+#155		move	t61	t40	
+#156		lw	t61	t61	0
+#157		mul	t62	t61	4
+#158		add	t58	t58	t62
+#159		lw	t58	t58	0
+#160		move	$a0	t58	
+#161		call	__printf_one
+#162		label	l20	
+#163		move	t54	t40	
+#164		move	t63	t54	
+#165		lw	t54	t54	0
+#166		add	t54	t54	1
+#167		sw	t54	t63	0
+#168		move	t64	t40	
+#169		lw	t64	t64	0
+#170		li	t65	3	
+#171		sub	t65	t64	t65
+#172		li	t64	1	
+#173		bltz	t65	l23	
+#174		li	t64	0	
+#175		label	l23	
+#176		bnez	t64	l19	
+#177		label	l21	
+#178		label	l16	
+#179		move	t50	t10	
+#180		move	t66	t50	
+#181		lw	t50	t50	0
+#182		add	t50	t50	1
+#183		sw	t50	t66	0
+#184		move	t67	t10	
+#185		lw	t67	t67	0
+#186		li	t68	2	
+#187		sub	t68	t67	t68
+#188		li	t67	1	
+#189		bltz	t68	l24	
+#190		li	t67	0	
+#191		label	l24	
+#192		bnez	t67	l15	
+#193		label	l17	
+#194		li	t70	0	
+#195		add	t69	$sp	4
+#196		sw	t70	t69	0
+#197		ret	
+#198		ret	

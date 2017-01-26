@@ -1,0 +1,25 @@
+*Proj: contains the code of the project.
+-inc: contains the source code of c plus plus.
+	|-Inc.h: the fundamental header.
+	|-Node.h: the defination of the tree node of the syntax tree.
+	|-Intermediate.h: translate sytax tree into three address code.
+	|-Semantic.h: check sematic error.
+	|-Optim.h: optimization of the IR.
+	|-Code_gen.h: translate intermediate code into MIPS code.
+-smallc.l: Lex file.
+-smallc.y: Yacc file.
+-makefile: makefile.
+-InterCode: the intermediate representation of test0.
+-MIPSCode.s: the MIPS assembly code of test0.
+-test0: one of the test file.
+-scc: the execution file.
+
+*TestCase: contains ten test code files.
+
+*Result: contains the results of the test file.
+-InterCode: contains ten intermediate codes of the test files.
+-MIPSCode: contains ten MIPS codes of the test files.
+
+*Report: contains the report and the IR design file.
+-LuoYudong_report.pdf: my compiler report.
+-IR_Design: my Intermediate Representation design.

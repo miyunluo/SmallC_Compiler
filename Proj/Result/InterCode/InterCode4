@@ -1,0 +1,102 @@
+gir print------------------------------------
+mir print------------------------------------
+ir print-------------------------------------
+#0func	main
+#1		add	t3	$sp	-120
+#2		move	t2	t3	
+#3		move	t4	t2	
+#4		call	__scanf_one
+#5		sw	$v0	t4	0
+#6		move	t5	t2	
+#7		lw	t5	t5	0
+#8		li	t6	2	
+#9		rem	t5	t5	t6
+#10		li	t7	0	
+#11		sub	t7	t5	t7
+#12		li	t5	1	
+#13		beqz	t7	l2	
+#14		li	t5	0	
+#15		label	l2	
+#16		beqz	t5	l0	
+#17		move	t8	t2	
+#18		lw	t8	t8	0
+#19		move	$a0	t8	
+#20		call	__printf_one
+#21		goto	l1	
+#22		label	l0	
+#23		move	t9	t2	
+#24		move	t10	t2	
+#25		lw	t10	t10	0
+#26		li	t11	1	
+#27		sub	t10	t10	t11
+#28		li	t12	2	
+#29		div	t10	t10	t12
+#30		sw	t10	t9	0
+#31		move	t13	t2	
+#32		lw	t13	t13	0
+#33		li	t14	2	
+#34		rem	t13	t13	t14
+#35		li	t15	0	
+#36		sub	t15	t13	t15
+#37		li	t13	1	
+#38		beqz	t15	l5	
+#39		li	t13	0	
+#40		label	l5	
+#41		beqz	t13	l3	
+#42		move	t16	t2	
+#43		lw	t16	t16	0
+#44		move	$a0	t16	
+#45		call	__printf_one
+#46		goto	l4	
+#47		label	l3	
+#48		move	t17	t2	
+#49		move	t18	t2	
+#50		lw	t18	t18	0
+#51		li	t19	1	
+#52		sub	t18	t18	t19
+#53		li	t20	2	
+#54		div	t18	t18	t20
+#55		sw	t18	t17	0
+#56		move	t21	t2	
+#57		lw	t21	t21	0
+#58		li	t22	2	
+#59		rem	t21	t21	t22
+#60		li	t23	0	
+#61		sub	t23	t21	t23
+#62		li	t21	1	
+#63		beqz	t23	l8	
+#64		li	t21	0	
+#65		label	l8	
+#66		beqz	t21	l6	
+#67		move	t24	t2	
+#68		lw	t24	t24	0
+#69		move	$a0	t24	
+#70		call	__printf_one
+#71		goto	l7	
+#72		label	l6	
+#73		move	t25	t2	
+#74		lw	t25	t25	0
+#75		li	t26	2	
+#76		rem	t25	t25	t26
+#77		li	t27	0	
+#78		sub	t27	t25	t27
+#79		li	t25	1	
+#80		beqz	t27	l11	
+#81		li	t25	0	
+#82		label	l11	
+#83		beqz	t25	l9	
+#84		move	t28	t2	
+#85		lw	t28	t28	0
+#86		move	$a0	t28	
+#87		call	__printf_one
+#88		goto	l10	
+#89		label	l9	
+#90		label	l10	
+#91		label	l7	
+#92		label	l4	
+#93		label	l1	
+#94		li	t30	0	
+#95		add	t29	$sp	4
+#96		sw	t30	t29	0
+#97		ret	
+#98		ret	

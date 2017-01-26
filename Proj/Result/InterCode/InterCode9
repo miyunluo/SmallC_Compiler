@@ -1,0 +1,302 @@
+gir print------------------------------------
+#0		gnew	400	t2	
+#1		gnew	400	t3	
+#2		gnew	400	t4	
+#3		gnew	400	t5	
+#4		gnew	4	t6	
+#5		gnew	4	t8	
+mir print------------------------------------
+#0		li	t7	0	
+#1		sw	t7	t6	0
+ir print-------------------------------------
+#0func	__print
+#1		add	t10	$sp	-72
+#2		move	t9	t10	
+#3		move	t11	t9	
+#4		li	t12	1	
+#5		sw	t12	t11	0
+#6		move	t13	t9	
+#7		lw	t13	t13	0
+#8		move	t14	t8	
+#9		lw	t14	t14	0
+#10		sub	t14	t13	t14
+#11		li	t13	1	
+#12		bltz	t14	l3	
+#13		li	t13	0	
+#14		label	l3	
+#15		beqz	t13	l2	
+#16		label	l0	
+#17		move	t15	t5	
+#18		move	t16	t9	
+#19		lw	t16	t16	0
+#20		mul	t17	t16	4
+#21		add	t15	t15	t17
+#22		lw	t15	t15	0
+#23		move	$a0	t15	
+#24		sw	$ra	$sp	-10000
+#25		call	__printf_one
+#26		lw	$ra	$sp	-10000
+#27		label	l1	
+#28		move	t11	t9	
+#29		move	t18	t11	
+#30		lw	t11	t11	0
+#31		add	t11	t11	1
+#32		sw	t11	t18	0
+#33		move	t19	t9	
+#34		lw	t19	t19	0
+#35		move	t20	t8	
+#36		lw	t20	t20	0
+#37		sub	t20	t19	t20
+#38		li	t19	1	
+#39		bltz	t20	l4	
+#40		li	t19	0	
+#41		label	l4	
+#42		bnez	t19	l0	
+#43		label	l2	
+#44		move	t21	t5	
+#45		move	t22	t8	
+#46		lw	t22	t22	0
+#47		mul	t23	t22	4
+#48		add	t21	t21	t23
+#49		lw	t21	t21	0
+#50		move	$a0	t21	
+#51		sw	$ra	$sp	-10000
+#52		call	__printf_one
+#53		lw	$ra	$sp	-10000
+#54		li	t25	0	
+#55		add	t24	$sp	4
+#56		sw	t25	t24	0
+#57		ret	
+#58		ret	
+#59func	__DFS
+#60		add	t26	$sp	0
+#61		add	t28	$sp	-320
+#62		move	t27	t28	
+#63		add	t30	$sp	-324
+#64		move	t29	t30	
+#65		add	t32	$sp	-328
+#66		move	t31	t32	
+#67		move	t33	t26	
+#68		lw	t33	t33	0
+#69		move	t34	t8	
+#70		lw	t34	t34	0
+#71		sub	t34	t33	t34
+#72		li	t33	1	
+#73		bgtz	t34	l7	
+#74		li	t33	0	
+#75		label	l7	
+#76		beqz	t33	l5	
+#77		move	t35	t6	
+#78		lw	t35	t35	0
+#79		li	t36	3	
+#80		sub	t36	t35	t36
+#81		li	t35	1	
+#82		bltz	t36	l10	
+#83		li	t35	0	
+#84		label	l10	
+#85		beqz	t35	l8	
+#86		sw	$ra	$sp	-336
+#87		add	$sp	$sp	-336
+#88		call	__print
+#89		sub	$sp	$sp	-336
+#90		lw	$ra	$sp	-336
+#91		add	t38	$sp	-332
+#92		move	t37	t38	
+#93		goto	l9	
+#94		label	l8	
+#95		label	l9	
+#96		move	t39	t6	
+#97		move	t40	t39	
+#98		lw	t39	t39	0
+#99		add	t39	t39	1
+#100		sw	t39	t40	0
+#101		li	t42	0	
+#102		add	t41	$sp	8
+#103		sw	t42	t41	0
+#104		ret	
+#105		goto	l6	
+#106		label	l5	
+#107		label	l6	
+#108		move	t43	t27	
+#109		li	t44	1	
+#110		sw	t44	t43	0
+#111		move	t45	t27	
+#112		lw	t45	t45	0
+#113		move	t46	t8	
+#114		lw	t46	t46	0
+#115		li	t47	1	
+#116		add	t46	t46	t47
+#117		sub	t46	t45	t46
+#118		li	t45	1	
+#119		bltz	t46	l14	
+#120		li	t45	0	
+#121		label	l14	
+#122		beqz	t45	l13	
+#123		label	l11	
+#124		move	t48	t2	
+#125		move	t49	t27	
+#126		lw	t49	t49	0
+#127		mul	t50	t49	4
+#128		add	t48	t48	t50
+#129		lw	t48	t48	0
+#130		lnot	t48	t48	
+#131		move	t51	t3	
+#132		move	t52	t27	
+#133		lw	t52	t52	0
+#134		move	t54	t26	
+#135		lw	t54	t54	0
+#136		add	t52	t52	t54
+#137		mul	t53	t52	4
+#138		add	t51	t51	t53
+#139		lw	t51	t51	0
+#140		lnot	t51	t51	
+#141		and	t51	t48	t51
+#142		li	t48	1	
+#143		bnez	t51	l17	
+#144		li	t48	0	
+#145		label	l17	
+#146		move	t55	t4	
+#147		move	t56	t27	
+#148		lw	t56	t56	0
+#149		move	t58	t26	
+#150		lw	t58	t58	0
+#151		sub	t56	t56	t58
+#152		li	t59	15	
+#153		add	t56	t56	t59
+#154		mul	t57	t56	4
+#155		add	t55	t55	t57
+#156		lw	t55	t55	0
+#157		lnot	t55	t55	
+#158		and	t55	t48	t55
+#159		li	t48	1	
+#160		bnez	t55	l18	
+#161		li	t48	0	
+#162		label	l18	
+#163		beqz	t48	l15	
+#164		move	t60	t2	
+#165		move	t61	t27	
+#166		lw	t61	t61	0
+#167		mul	t62	t61	4
+#168		add	t60	t60	t62
+#169		li	t63	1	
+#170		sw	t63	t60	0
+#171		move	t64	t3	
+#172		move	t65	t27	
+#173		lw	t65	t65	0
+#174		move	t67	t26	
+#175		lw	t67	t67	0
+#176		add	t65	t65	t67
+#177		mul	t66	t65	4
+#178		add	t64	t64	t66
+#179		li	t68	1	
+#180		sw	t68	t64	0
+#181		move	t69	t4	
+#182		move	t70	t27	
+#183		lw	t70	t70	0
+#184		move	t72	t26	
+#185		lw	t72	t72	0
+#186		sub	t70	t70	t72
+#187		li	t73	15	
+#188		add	t70	t70	t73
+#189		mul	t71	t70	4
+#190		add	t69	t69	t71
+#191		li	t74	1	
+#192		sw	t74	t69	0
+#193		move	t75	t5	
+#194		move	t76	t26	
+#195		lw	t76	t76	0
+#196		mul	t77	t76	4
+#197		add	t75	t75	t77
+#198		move	t78	t27	
+#199		lw	t78	t78	0
+#200		sw	t78	t75	0
+#201		sw	$ra	$sp	-336
+#202		move	t80	t26	
+#203		lw	t80	t80	0
+#204		li	t81	1	
+#205		add	t80	t80	t81
+#206		add	t82	$sp	-340
+#207		sw	t80	t82	0
+#208		add	$sp	$sp	-340
+#209		call	__DFS
+#210		sub	$sp	$sp	-340
+#211		lw	$ra	$sp	-336
+#212		add	t83	$sp	-332
+#213		move	t79	t83	
+#214		move	t84	t2	
+#215		move	t85	t27	
+#216		lw	t85	t85	0
+#217		mul	t86	t85	4
+#218		add	t84	t84	t86
+#219		li	t87	0	
+#220		sw	t87	t84	0
+#221		move	t88	t3	
+#222		move	t89	t27	
+#223		lw	t89	t89	0
+#224		move	t91	t26	
+#225		lw	t91	t91	0
+#226		add	t89	t89	t91
+#227		mul	t90	t89	4
+#228		add	t88	t88	t90
+#229		li	t92	0	
+#230		sw	t92	t88	0
+#231		move	t93	t4	
+#232		move	t94	t27	
+#233		lw	t94	t94	0
+#234		move	t96	t26	
+#235		lw	t96	t96	0
+#236		sub	t94	t94	t96
+#237		li	t97	15	
+#238		add	t94	t94	t97
+#239		mul	t95	t94	4
+#240		add	t93	t93	t95
+#241		li	t98	0	
+#242		sw	t98	t93	0
+#243		goto	l16	
+#244		label	l15	
+#245		label	l16	
+#246		label	l12	
+#247		move	t43	t27	
+#248		move	t99	t43	
+#249		lw	t43	t43	0
+#250		add	t43	t43	1
+#251		sw	t43	t99	0
+#252		move	t100	t27	
+#253		lw	t100	t100	0
+#254		move	t101	t8	
+#255		lw	t101	t101	0
+#256		li	t102	1	
+#257		add	t101	t101	t102
+#258		sub	t101	t100	t101
+#259		li	t100	1	
+#260		bltz	t101	l19	
+#261		li	t100	0	
+#262		label	l19	
+#263		bnez	t100	l11	
+#264		label	l13	
+#265		li	t104	0	
+#266		add	t103	$sp	8
+#267		sw	t104	t103	0
+#268		ret	
+#269		ret	
+#270func	main
+#271		move	t105	t8	
+#272		call	__scanf_one
+#273		sw	$v0	t105	0
+#274		li	t107	1	
+#275		add	t108	$sp	-44
+#276		sw	t107	t108	0
+#277		add	$sp	$sp	-44
+#278		call	__DFS
+#279		sub	$sp	$sp	-44
+#280		add	t109	$sp	-36
+#281		move	t106	t109	
+#282		move	t110	t6	
+#283		lw	t110	t110	0
+#284		move	$a0	t110	
+#285		call	__printf_one
+#286		li	t112	0	
+#287		add	t111	$sp	4
+#288		sw	t112	t111	0
+#289		ret	
+#290		ret	

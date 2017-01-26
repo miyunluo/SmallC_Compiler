@@ -1,0 +1,163 @@
+gir print------------------------------------
+mir print------------------------------------
+ir print-------------------------------------
+#0func	__divide
+#1		add	t2	$sp	0
+#2		add	t3	$sp	4
+#3		move	t5	t2	
+#4		lw	t5	t5	0
+#5		move	t6	t3	
+#6		lw	t6	t6	0
+#7		rem	t5	t5	t6
+#8		add	t4	$sp	12
+#9		sw	t5	t4	0
+#10		ret	
+#11		ret	
+#12func	__prime
+#13		add	t7	$sp	0
+#14		add	t9	$sp	-120
+#15		move	t8	t9	
+#16		add	t11	$sp	-124
+#17		move	t10	t11	
+#18		li	t12	1	
+#19		sw	t12	t10	0
+#20		move	t13	t7	
+#21		lw	t13	t13	0
+#22		li	t14	2	
+#23		sub	t14	t13	t14
+#24		li	t13	1	
+#25		blez	t14	l2	
+#26		li	t13	0	
+#27		label	l2	
+#28		beqz	t13	l0	
+#29		li	t16	0	
+#30		add	t15	$sp	8
+#31		sw	t16	t15	0
+#32		ret	
+#33		goto	l1	
+#34		label	l0	
+#35		move	t17	t8	
+#36		li	t18	2	
+#37		sw	t18	t17	0
+#38		move	t19	t8	
+#39		lw	t19	t19	0
+#40		move	t20	t7	
+#41		lw	t20	t20	0
+#42		sub	t20	t19	t20
+#43		li	t19	1	
+#44		bltz	t20	l6	
+#45		li	t19	0	
+#46		label	l6	
+#47		beqz	t19	l5	
+#48		label	l3	
+#49		sw	$ra	$sp	-132
+#50		move	t22	t8	
+#51		add	t23	$sp	-136
+#52		lw	t22	t22	0
+#53		sw	t22	t23	0
+#54		move	t24	t7	
+#55		add	t25	$sp	-140
+#56		lw	t24	t24	0
+#57		sw	t24	t25	0
+#58		add	$sp	$sp	-140
+#59		call	__divide
+#60		sub	$sp	$sp	-140
+#61		lw	$ra	$sp	-132
+#62		add	t26	$sp	-128
+#63		move	t21	t26	
+#64		lw	t21	t21	0
+#65		li	t27	0	
+#66		sub	t27	t21	t27
+#67		li	t21	1	
+#68		beqz	t27	l9	
+#69		li	t21	0	
+#70		label	l9	
+#71		beqz	t21	l7	
+#72		move	t28	t10	
+#73		li	t29	0	
+#74		sw	t29	t28	0
+#75		goto	l4	
+#76		goto	l8	
+#77		label	l7	
+#78		label	l8	
+#79		label	l4	
+#80		move	t17	t8	
+#81		move	t30	t8	
+#82		lw	t30	t30	0
+#83		li	t31	1	
+#84		add	t30	t30	t31
+#85		sw	t30	t17	0
+#86		move	t32	t8	
+#87		lw	t32	t32	0
+#88		move	t33	t7	
+#89		lw	t33	t33	0
+#90		sub	t33	t32	t33
+#91		li	t32	1	
+#92		bltz	t33	l10	
+#93		li	t32	0	
+#94		label	l10	
+#95		bnez	t32	l3	
+#96		label	l5	
+#97		label	l1	
+#98		move	t35	t10	
+#99		add	t34	$sp	8
+#100		lw	t35	t35	0
+#101		sw	t35	t34	0
+#102		ret	
+#103		ret	
+#104func	main
+#105		add	t37	$sp	-80
+#106		move	t36	t37	
+#107		li	t38	0	
+#108		sw	t38	t36	0
+#109		add	t40	$sp	-84
+#110		move	t39	t40	
+#111		move	t41	t36	
+#112		call	__scanf_one
+#113		sw	$v0	t41	0
+#114		move	t43	t36	
+#115		lw	t43	t43	0
+#116		li	t44	0	
+#117		sub	t44	t43	t44
+#118		li	t43	1	
+#119		bgez	t44	l14	
+#120		li	t43	0	
+#121		label	l14	
+#122		beqz	t43	l13	
+#123		label	l11	
+#124		move	t45	t39	
+#125		call	__scanf_one
+#126		sw	$v0	t45	0
+#127		move	t47	t39	
+#128		add	t48	$sp	-96
+#129		lw	t47	t47	0
+#130		sw	t47	t48	0
+#131		add	$sp	$sp	-96
+#132		call	__prime
+#133		sub	$sp	$sp	-96
+#134		add	t49	$sp	-88
+#135		move	t46	t49	
+#136		lw	t46	t46	0
+#137		move	$a0	t46	
+#138		call	__printf_one
+#139		label	l12	
+#140		move	t42	t36	
+#141		move	t50	t42	
+#142		lw	t42	t42	0
+#143		add	t42	t42	
+#144		sw	t42	t50	0
+#145		move	t51	t36	
+#146		lw	t51	t51	0
+#147		li	t52	0	
+#148		sub	t52	t51	t52
+#149		li	t51	1	
+#150		bgez	t52	l15	
+#151		li	t51	0	
+#152		label	l15	
+#153		bnez	t51	l11	
+#154		label	l13	
+#155		li	t54	0	
+#156		add	t53	$sp	4
+#157		sw	t54	t53	0
+#158		ret	
+#159		ret	

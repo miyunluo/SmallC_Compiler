@@ -1,0 +1,71 @@
+gir print------------------------------------
+#0		gnew	4	t2	
+#1		gnew	4	t3	
+mir print------------------------------------
+ir print-------------------------------------
+#0func	__gcd
+#1		add	t4	$sp	0
+#2		add	t5	$sp	4
+#3		move	t6	t5	
+#4		lw	t6	t6	0
+#5		lnot	t6	t6	
+#6		beqz	t6	l0	
+#7		move	t8	t4	
+#8		add	t7	$sp	12
+#9		lw	t8	t8	0
+#10		sw	t8	t7	0
+#11		ret	
+#12		goto	l1	
+#13		label	l0	
+#14		label	l1	
+#15		sw	$ra	$sp	-60
+#16		move	t11	t4	
+#17		lw	t11	t11	0
+#18		move	t12	t5	
+#19		lw	t12	t12	0
+#20		rem	t11	t11	t12
+#21		add	t13	$sp	-64
+#22		sw	t11	t13	0
+#23		move	t14	t5	
+#24		add	t15	$sp	-68
+#25		lw	t14	t14	0
+#26		sw	t14	t15	0
+#27		add	$sp	$sp	-68
+#28		call	__gcd
+#29		sub	$sp	$sp	-68
+#30		lw	$ra	$sp	-60
+#31		add	t16	$sp	-56
+#32		move	t10	t16	
+#33		add	t9	$sp	12
+#34		lw	t10	t10	0
+#35		sw	t10	t9	0
+#36		ret	
+#37		ret	
+#38func	main
+#39		move	t17	t2	
+#40		call	__scanf_one
+#41		sw	$v0	t17	0
+#42		move	t18	t3	
+#43		call	__scanf_one
+#44		sw	$v0	t18	0
+#45		move	t20	t3	
+#46		add	t21	$sp	-52
+#47		lw	t20	t20	0
+#48		sw	t20	t21	0
+#49		move	t22	t2	
+#50		add	t23	$sp	-56
+#51		lw	t22	t22	0
+#52		sw	t22	t23	0
+#53		add	$sp	$sp	-56
+#54		call	__gcd
+#55		sub	$sp	$sp	-56
+#56		add	t24	$sp	-44
+#57		move	t19	t24	
+#58		lw	t19	t19	0
+#59		move	$a0	t19	
+#60		call	__printf_one
+#61		li	t26	0	
+#62		add	t25	$sp	4
+#63		sw	t26	t25	0
+#64		ret	
+#65		ret	

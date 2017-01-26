@@ -1,0 +1,52 @@
+gir print------------------------------------
+#0		gnew	4	t2	
+#1		gnew	4	t3	
+#2		gnew	16	t4	
+#3		gnew	20	t5	
+#4		gnew	20	t6	
+#5		gnew	20	t7	
+mir print------------------------------------
+ir print-------------------------------------
+#0func	main
+#1		move	t8	t2	
+#2		add	t8	t8	0
+#3		call	__scanf_one
+#4		sw	$v0	t8	0
+#5		move	t9	t3	
+#6		add	t9	t9	0
+#7		call	__scanf_one
+#8		sw	$v0	t9	0
+#9		move	t10	t4	
+#10		add	t10	t10	12
+#11		call	__scanf_one
+#12		sw	$v0	t10	0
+#13		move	t11	t5	
+#14		add	t11	t11	16
+#15		li	t12	1234567890	
+#16		neg	t12	t12	
+#17		sw	t12	t11	0
+#18		move	t13	t5	
+#19		add	t13	t13	16
+#20		lw	t13	t13	0
+#21		move	$a0	t13	
+#22		call	__printf_one
+#23		move	t14	t2	
+#24		add	t14	t14	0
+#25		lw	t14	t14	0
+#26		move	$a0	t14	
+#27		call	__printf_one
+#28		move	t15	t3	
+#29		add	t15	t15	0
+#30		lw	t15	t15	0
+#31		move	$a0	t15	
+#32		call	__printf_one
+#33		move	t16	t4	
+#34		add	t16	t16	12
+#35		lw	t16	t16	0
+#36		move	$a0	t16	
+#37		call	__printf_one
+#38		li	t18	0	
+#39		add	t17	$sp	4
+#40		sw	t18	t17	0
+#41		ret	
+#42		ret	
